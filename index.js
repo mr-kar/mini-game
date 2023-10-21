@@ -1,6 +1,6 @@
 class Start{
     constructor(){
-        this.playerName = 'player'
+        this.playerName = 'kamu'
         this.botName = 'bot'
         this.playerOption;
         this.botOption;
