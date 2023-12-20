@@ -1,7 +1,7 @@
 class Start{
     constructor(){
-        this.playerName = 'kamu'
-        this.botName = 'bot'
+        this.playerName = 'YOU'
+        this.botName = 'BOT'
         this.playerOption;
         this.botOption;
         this.winner = ''
@@ -20,32 +20,32 @@ class Start{
         this.playerOption = option;
     }
     botBrain() {
-        const option = ['KERTAS', 'GUNTING', 'BATU'];
+        const option = ['PAPER', 'SCISSORS', 'ROCK'];
         const bot = option[Math.floor(Math.random() * option.length)];
         return bot;
     }
     winCalculation() {
-        if(this.botOption == 'KERTAS' && this.playerOption == 'GUNTING') {
+        if(this.botOption == 'PAPER' && this.playerOption == 'SCISSORS') {
             return this.winner = this.playerName
-        }else if(this.botOption == 'KERTAS' && this.playerOption == 'BATU'){
+        }else if(this.botOption == 'PAPER' && this.playerOption == 'ROCK'){
             return this.winner = this.botName
-        }else if(this.botOption == 'GUNTING' && this.playerOption == 'KERTAS'){
+        }else if(this.botOption == 'SCISSORS' && this.playerOption == 'PAPER'){
             return this.winner = this.botName
-        }else if(this.botOption == 'GUNTING' && this.playerOption == 'BATU'){
+        }else if(this.botOption == 'SCISSORS' && this.playerOption == 'ROCK'){
             return this.winner = this.playerName
-        }else if(this.botOption == 'BATU' && this.playerOption == 'GUNTING') {
+        }else if(this.botOption == 'ROCK' && this.playerOption == 'SCISSORS') {
             return this.winner = this.botName
-        }else if(this.botOption == 'BATU' && this.playerOption == 'KERTAS') {
+        }else if(this.botOption == 'ROCK' && this.playerOption == 'PAPER') {
             return this.winner = this.playerName
         }else {
-            return this.winner = 'SERI'
+            return this.winner = 'DRAW'
         }
     }
     macthResult(){
-        if(this.winner !='SERI') {
-            return `selamat ${this.winner} menang!!`
+        if(this.winner !='DRAW') {
+            return `CONGRATULATIONS ${this.winner} WIN!!`
         }else {
-            return`${this.winner} tidak ada yang menang!!`
+            return`${this.winner} NOBODY WINS!!`
         }
     }
 }
