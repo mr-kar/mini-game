@@ -1,2 +1,2 @@
 # mini-game
-membuat game kertas ,gunting,batu menggunakan javascript 
+create a paper, scissors, rock game using javascript
